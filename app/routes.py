@@ -6,7 +6,7 @@ from pygments.formatters.html import HtmlFormatter
 from markupsafe import Markup
 
 
-@app.route("/")
+@app.route("/welcome")
 def index():
     with open("README.md", "r") as fp:
         formatter = HtmlFormatter(

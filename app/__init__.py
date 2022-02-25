@@ -84,6 +84,7 @@ def init_app(extra_config_settings={}):
     admin.add_view(FileAdmin(path, '/static/', name='Files'))
     admin.add_link(MenuLink(name='Profile', endpoint='members.member_page'))
     admin.add_link(MenuLink(name='Logout', endpoint='security.logout'))
+    # admin.add_link(MenuLink(name='Dashboard', endpoint='public.index'))
 
     with app.app_context():
         from . import routes
